@@ -7,6 +7,7 @@ import ProjectsSection from './ProjectsSection';
 import ContactSection from './ContactSection';
 import ThreeBackground from './ThreeBackground';
 import FreelanceProject from './FreelanceProjects';
+import ExperienceSection from './ExperienceSection';
 // import Footer from './Footer';
 
 const Portfolio3D = () => {
@@ -46,6 +47,9 @@ const Portfolio3D = () => {
 
             {/* About Section */}
             <AboutSection />
+
+            {/* Experience Section */}
+            <ExperienceSection />
 
             {/* Projects Section */}
             <ProjectsSection />

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navItems = ['Home', 'About', 'Projects', 'Contact'];
+    const navItems = ['Home', 'About', 'Experience', 'Projects', 'Contact'];
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -102,7 +102,9 @@ const Navigation = () => {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={() => {
+                                            setTimeout(() => setIsOpen(false), 800);
+                                        }}
                                     >
                                         {item}
                                     </motion.a>
