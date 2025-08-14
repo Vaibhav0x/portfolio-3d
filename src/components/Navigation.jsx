@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navItems = ['Home', 'About', 'Experience', 'Projects', 'Contact'];
+    const navItems = ['Home', 'About', 'Experience', 'Projects', 'Reviews', 'Contact'];
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
