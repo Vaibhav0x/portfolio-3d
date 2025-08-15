@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
-// const API_BASE = process.env.REACT_APP_NEXT_PUBLIC_REVIEWS_API;
-const API_BASE = "https://reviews-backend-production.up.railway.app";
+const API_BASE = process.env.REACT_APP_NEXT_PUBLIC_REVIEWS_API;
 
 
 const ReviewsSection = () => {
