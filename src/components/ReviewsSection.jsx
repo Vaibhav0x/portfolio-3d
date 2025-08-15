@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
-const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API || "http://localhost:3000";
+const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API;
 
 const ReviewsSection = () => {
     const [reviews, setReviews] = useState([]);
