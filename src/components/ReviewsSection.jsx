@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
-import cors from "cors";
 
 // const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API || "https://reviews-backend-production.up.railway.app";
 const API_BASE = "https://reviews-backend-production.up.railway.app";
