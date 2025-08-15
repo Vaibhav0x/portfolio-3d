@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import cors from "cors";
 
-const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API;
+// const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API || "https://reviews-backend-production.up.railway.app";
+const API_BASE = "https://reviews-backend-production.up.railway.app";
+
+console.log("API_BASE:", API_BASE);
+
 
 const ReviewsSection = () => {
     const [reviews, setReviews] = useState([]);
@@ -16,9 +21,30 @@ const ReviewsSection = () => {
         fetchReviews();
     }, []);
 
+    // const fetchReviews = async () => {
+    //     try {
+    //         const response = await fetch(`${API_BASE}/reviews`);
+    //         const data = await response.json();
+    //         setReviews(Array.isArray(data) ? data : data.reviews || []);
+    //     } catch (error) {
+    //         console.error("Error fetching reviews:", error);
+    //         setReviews([]);
+    //     }
+    // };
     const fetchReviews = async () => {
         try {
-            const response = await fetch(`${API_BASE}/reviews`);
+            const url = `${API_BASE}/reviews`;
+            console.log("Fetching reviews from:", url);
+
+            const response = await fetch(url);
+
+            // If server doesn't send JSON, log the raw text to debug
+            const contentType = response.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+                const text = await response.text();
+                throw new Error(`Expected JSON, got: ${text.substring(0, 200)}`);
+            }
+
             const data = await response.json();
             setReviews(Array.isArray(data) ? data : data.reviews || []);
         } catch (error) {
@@ -26,6 +52,7 @@ const ReviewsSection = () => {
             setReviews([]);
         }
     };
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
