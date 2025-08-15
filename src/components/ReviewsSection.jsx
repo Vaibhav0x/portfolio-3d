@@ -2,7 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
-const API_BASE = process.env.NEXT_PUBLIC_REVIEWS_API;
+const API_BASE = process.env.REACT_APP_NEXT_PUBLIC_REVIEWS_API;
+// const API_BASE = "https://reviews-backend-production.up.railway.app";
+
+console.log("API_BASE:", API_BASE);
+
 
 const ReviewsSection = () => {
     const [reviews, setReviews] = useState([]);
@@ -29,6 +33,7 @@ const ReviewsSection = () => {
     const fetchReviews = async () => {
         try {
             const url = `${API_BASE}/reviews`;
+            console.log("Fetching reviews from:", url);
 
             const response = await fetch(url);
 
