@@ -23,4 +23,25 @@ export const freelanceProjects = [
         live: "https://preview.codecanyon.net/item/martfury-multipurpose-laravel-ecommerce-system/full_screen_preview/29925223?_ga=2.56263723.1889731552.1751646253-1524901493.1733348023",
         featured: true
     },
+    {
+        id: 3,
+        title: "Prompt Management Platform",
+        description: "The Prompt Management Platform is a web-based solution designed to efficiently manage and organize prompts within a centralized database. It provides an intuitive dashboard where users can create, update, delete, and categorize prompts for different use cases such as AI applications, content generation, and customer support. Key features include a user-friendly dashboard for CRUD operations, real-time updates, search and filter options, and secure backend APIs. Built with React.js, Node.js, MySQL, and TailwindCSS, the platform ensures scalability, reliability, and a modern responsive UI.",
+        tech: ["ReactJs", "NodeJs", "MySQL", "Tailwind"],
+        // image: "🛍️",
+        image: "📊",
+        github: "https://github.com/Vaibhav0x/smapho365-liff",
+        live: "https://github.com/Vaibhav0x/smapho365-functions",
+        featured: true
+    },
+    {
+        id: 4,
+        title: "AI Platform URL Extractor",
+        description: "The AI Platform URL Extractor is a web-based tool that uses Selenium for intelligent web scraping to extract public user information from platforms like Instagram, Twitter, and TikTok. It collects key details such as profile URLs, bios, images, gender, and age, then organizes and displays the results on a user-friendly dashboard. The extracted data is also saved into a CSV file for further analysis and reporting. Built with React.js, Django, Machine Learning, Selenium, and TailwindCSS, the platform ensures accurate data collection, scalability, and a modern responsive interface.",
+        tech: ["ReactJs", "Django", "ML", "Selenium", "CSV", "Tailwind"],
+        image: "🔎",
+        github: "https://github.com/Vaibhav0x/",
+        live: "",
+        featured: true
+    },
 ];
