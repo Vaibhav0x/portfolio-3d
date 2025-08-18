@@ -14,9 +14,9 @@ const ContactSection = () => {
     const [visits, setVisits] = useState(null);
 
     useEffect(() => {
-        fetch('https://api.countapi.xyz/hit/vaibhav-raj-tech.vercel.app/visits')
-            .then(res => res.json())
-            .then(data => setVisits(data.value));
+        fetch('https://api.countapi.xyz/hit/vaibhav-raj-tech-vercel-app/visits')
+          .then(res => res.json())
+          .then(data => console.log(data.value));
     }, []);
 
     const [formData, setFormData] = useState({
