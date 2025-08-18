@@ -273,6 +273,15 @@ const ContactSection = () => {
                                 >
                                     <FaDiscord className="text-lg sm:text-xl group-hover:text-black" />
                                 </motion.a>
+                                <motion.a
+                                    href="https://github.com/Vaibhav0x"
+                                    target="_blank"
+                                    className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors group"
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
+                                    <FaGithub className="text-lg sm:text-xl group-hover:text-white" />
+                                </motion.a>
                             </div>
                         </div>
                     </motion.div>
