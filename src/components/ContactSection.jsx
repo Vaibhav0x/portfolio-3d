@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord,FaGithub } from 'react-icons/fa';
@@ -10,6 +10,14 @@ const ContactSection = () => {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(null);
+
+    const [visits, setVisits] = useState(null);
+
+    useEffect(() => {
+        fetch('https://api.countapi.xyz/hit/vaibhav-raj-tech.vercel.app/visits')
+            .then(res => res.json())
+            .then(data => setVisits(data.value));
+    }, []);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -282,6 +290,10 @@ const ContactSection = () => {
                                 >
                                     <FaGithub className="text-lg sm:text-xl group-hover:text-white" />
                                 </motion.a>
+                            </div>
+                            {/* Visitor Counter */}
+                            <div className="pt-4 text-gray-400 text-sm text-center">
+                                {visits !== null ? `👀 ${visits} visitors so far` : 'Loading visitors...'}
                             </div>
                         </div>
                     </motion.div>
