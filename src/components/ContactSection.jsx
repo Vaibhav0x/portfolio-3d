@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord,FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { SiFiverr } from 'react-icons/si';
 
