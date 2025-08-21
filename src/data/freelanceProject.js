@@ -44,4 +44,24 @@ export const freelanceProjects = [
         live: "",
         featured: true
     },
+    {
+        id: 5,
+        title: "Twitter Automation Chrome Xtension",
+        description: "A Chrome Extension that automates Twitter interactions such as following, unfollowing, and liking posts. Built for social media growth and management.",
+        tech: ["JavaScript", "HTML", "CSS", "PlayWright"],
+        image: "🧩", // Represents a browser extension
+        github: "https://github.com/Vaibhav0x/",
+        live: "",
+        featured: true
+    },
+    {
+        id: 6,
+        title: "Vita Neuf Web",
+        description: "A modern and interactive website for Vita Neuf, showcasing advanced 3D animations and smooth UI/UX using Three.js and Framer Motion.",
+        tech: ["ReactJs", "Tailwind", "ThreeJs", "Framer Motion"],
+        image: "🌐",
+        github: "https://github.com/Vaibhav0x/",
+        live: "https://vitaneuf.netlify.app/",
+        featured: true
+    },
 ];
