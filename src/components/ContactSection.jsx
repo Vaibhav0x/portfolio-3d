@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord,FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaInstagram, FaDiscord, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { SiFiverr } from 'react-icons/si';
 
 const ContactSection = () => {
     const form = useRef();
@@ -255,7 +254,7 @@ const ContactSection = () => {
                                 >
                                     <FaInstagram className="text-lg sm:text-xl group-hover:text-black" />
                                 </motion.a>
-                                <motion.a
+                                {/* <motion.a
                                     href="https://www.fiverr.com/users/vaibhavraj01x/"
                                     target="_blank"
                                     className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors group"
@@ -263,7 +262,7 @@ const ContactSection = () => {
                                     whileTap={{ scale: 0.9 }}
                                 >
                                     <SiFiverr className="text-lg sm:text-xl group-hover:text-black" />
-                                </motion.a>
+                                </motion.a> */}
                                 <motion.a
                                     href="https://discord.com/users/669880381649977354"
                                     target="_blank"
